@@ -10,5 +10,4 @@ export const postUrl = (data) => {
     body: JSON.stringify(data)
   })
   .then(response => response.json())
-  .catch(err => console.log(err));
 }
