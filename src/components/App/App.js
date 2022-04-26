@@ -12,8 +12,13 @@ export class App extends Component {
     }
   }
 
-  componentDidMount() {
+  fetchUrls = () => {
+    getUrls()
+    .then(data => this.setState({urls: data.urls}))
+    console.log(this.state.urls)
   }
+
+  componentDidMount = () => this.fetchUrls()  
 
   render() {
     return (
