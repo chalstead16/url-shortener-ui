@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import './App.css';
 import { getUrls } from '../../apiCalls';
+import { postUrl } from '../../apiCalls';
 import UrlContainer from '../UrlContainer/UrlContainer';
 import UrlForm from '../UrlForm/UrlForm';
 
@@ -15,13 +16,13 @@ export class App extends Component {
   fetchUrls = () => {
     getUrls()
     .then(data => this.setState({urls: data.urls}))
-    console.log(this.state.urls)
   }
 
   componentDidMount = () => this.fetchUrls()
   
   addUrl = (newUrl) => {
-    this.setState({urls: [newUrl, ...this.state.urls]})
+    postUrl(newUrl)
+    .then((data) => this.setState({urls: [data, ...this.state.urls]}))
   }
 
   render() {
