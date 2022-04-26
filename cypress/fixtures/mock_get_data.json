@@ -1,5 +1,16 @@
 {
-  "name": "Using fixtures to represent data",
-  "email": "hello@cypress.io",
-  "body": "Fixtures are a great way to mock data for responses to routes"
+  "urls":[
+    {
+      "id": "2",
+      "long_url": "https://images.unsplash.com/photo-1650944471530-b4074337e32a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=776&q=80",
+      "short_url": "http://localhost:3001/useshorturl/2",
+      "title": "example 2 - waterfall"
+    },
+    {
+      "id": "1",
+      "long_url": "https://images.unsplash.com/photo-1650912374615-9b25f9ae1deb?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80",
+      "short_url": "http://localhost:3001/useshorturl/1",
+      "title": "example 1 - mountains"
+    }
+  ] 
 }
